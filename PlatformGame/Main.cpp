@@ -1,8 +1,6 @@
-﻿#include <SDL.h>
-#include <SDL_image.h>
-#include <assert.h>
-#include <SDL_mixer.h>
-#include <SDL_ttf.h>
+﻿#include "Game.h"
+#include "stdafx.h"
+
 int main(int argc, char** argv)
 {
 	Game game;
@@ -10,5 +8,6 @@ int main(int argc, char** argv)
 	{
 		game.Quit();
 	}
+
 	return 0;
 }

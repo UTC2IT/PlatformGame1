@@ -3,6 +3,7 @@
 #include <assert.h>
 #include <SDL_mixer.h>
 #include <SDL_ttf.h>
+#include <iostream>
 int main(int argc, char** argv)
 {
 	std::cout << "Khánh xin chào các bạn nhá!";

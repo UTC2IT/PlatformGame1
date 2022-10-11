@@ -7,6 +7,7 @@
 int main(int argc, char** argv)
 {
 	std::cout << "Khánh xin chào các bạn nhá!";
+	std::cout << "Hùng còn non lắm";
 	SDL_Window* m_Window;
 	SDL_Renderer* m_Renderer;
 	assert(SDL_Init(SDL_INIT_VIDEO) == 0 && SDL_GetError());

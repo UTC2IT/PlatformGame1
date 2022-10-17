@@ -18,5 +18,6 @@ public:
 	friend Point operator -= (Point& p1, const Point& p2);
 	Point operator* (const float scaler) const;
 };
+
 #endif
 

@@ -27,5 +27,6 @@ public:
 	void swap(Vector2D& v1, Vector2D& v2);
 
 };
+
 #endif
 

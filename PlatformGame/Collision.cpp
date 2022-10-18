@@ -1,17 +1,17 @@
 ﻿#include "stdafx.h"
 #include "Collision.h"
 
-Collision* Collision::s_Instance = nullptr;
+Collision* Collision::sInstance = nullptr;
 
 Collision::Collision()
 {
-	//m_CollisionLayer = Game::getInstance()->GetMap()->GetMapLayers()[0];//lấy layer phía dưới(layer của các vật cản)
-	m_CollisionTileMap = m_CollisionLayer->GetTileMap();
-	m_Collider = new Collider();
+	//mCollisionLayer = Game::getInstance()->GetMap()->GetMapLayers()[0];//lấy layer phía dưới(layer của các vật cản)
+	mCollisionTileMap = mCollisionLayer->getTileMap();
+	mCollider = new Collider();
 }
 bool Collision::PointVsRect(Vector2D& const point, const SDL_Rect& rect)//không thể đặt const Vector2D  vì không tương thích với hàm thành viên, đói với SDL_Rect bên trong nó chỉ chứa các chỉ số để vẽ retangle
 {
-	return(point.GetX() >= rect.x && point.GetY() >= rect.w && point.GetX() < rect.x + rect.w && point.GetY() < rect.y + rect.h);
+	return(point.getX() >= rect.x && point.getY() >= rect.w && point.getX() < rect.x + rect.w && point.getY() < rect.y + rect.h);
 }
 bool Collision::RectVsRect(const SDL_Rect& rect1, const SDL_Rect& rect2)
 {

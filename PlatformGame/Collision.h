@@ -10,12 +10,12 @@ class Collision
 private:
 	Collision();
 
-	Collider* m_Collider;
+	Collider* mCollider;
 
-	TileMap m_CollisionTileMap;
-	TileLayer* m_CollisionLayer;
+	TileMap mCollisionTileMap;
+	TileLayer* mCollisionLayer;
 
-	static Collision* s_Instance;
+	static Collision* sInstance;
 public:
 
 
@@ -26,7 +26,7 @@ public:
 	bool DynamicRectVsMap(const SDL_Rect& in, const SDL_Rect& rect_static, const Vector2D& velocity);
 	bool SortGridMap(const SDL_Rect& in, std::vector<SDL_Rect>gridmap, const Vector2D& velocity, Vector2D contact_point, Vector2D& contact_normal, float& t_hit_near);
 
-	inline static Collision* GetInstance() { return s_Instance = (s_Instance != nullptr) ? s_Instance : new Collision(); }
+	inline static Collision* GetInstance() { return sInstance = (sInstance != nullptr) ? sInstance : new Collision(); }
 
 
 };

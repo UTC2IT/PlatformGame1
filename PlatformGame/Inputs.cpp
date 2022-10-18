@@ -1,7 +1,7 @@
 ﻿#include "stdafx.h"
 #include "Inputs.h"
 
-Inputs* Inputs::s_Instance = nullptr;
+Inputs* Inputs::sInstance = nullptr;
 
 Inputs::Inputs()
 {

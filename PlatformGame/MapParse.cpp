@@ -2,17 +2,22 @@
 #include "MapParse.h"
 
 
-MapParser* MapParser::s_Instance = nullptr;
+MapParser* MapParser::sInstance = nullptr;
 
+
+GameMap* MapParser::getMaps(std::string id)
+{
+	return mMapsDict[id];
+}
 
 void MapParser::Clean()
 {
 	std::map<std::string, GameMap*>::iterator it;
-	for (it = m_MapsDict.begin(); it != m_MapsDict.end(); it++)
+	for (it = mMapsDict.begin(); it != mMapsDict.end(); it++)
 	{
 		it->second = nullptr;
 	}
-	m_MapsDict.clear();
+	mMapsDict.clear();
 }
 
 GameMap* MapParser::Parse(std::string id, std::string source)//Parse : phân tích
@@ -52,11 +57,16 @@ GameMap* MapParser::Parse(std::string id, std::string source)//Parse : phân tí
 		if (e->Value() == std::string("layer"))
 		{
 			TileLayer* tilelayer = ParseTileLayer(e, tilesets, tilesize, rowcount, colcount);//truyền các tham số vào hàm ParseTileLayer(hàm return) để xử lý dữ liệu
-			gamemap->m_MapLayers.emplace_back(tilelayer);//sau khi xử lý xong push tilelayer vào mảng m_MapLayer(mảng các tilelayer)
+			gamemap->mMapLayers.emplace_back(tilelayer);//sau khi xử lý xong push tilelayer vào mảng m_MapLayer(mảng các tilelayer)
 		}
 	}
-	m_MapsDict[id] = gamemap;//lưu value gamemap vào key id
-	return m_MapsDict[id];
+	mMapsDict[id] = gamemap;//lưu value gamemap vào key id
+	return mMapsDict[id];
+}
+
+MapParser* MapParser::getInstance()
+{
+	return sInstance = (sInstance != nullptr) ? sInstance : new MapParser();
 }
 
 Tileset MapParser::ParseTileset(TiXmlElement* xmlTileset)// phân tích tileset, trả về các thông số của tileset(dữ liệu của một ô) trong tệp xml,<tileset firstgid="1226" name="Background" tilewidth="16" tileheight="16" tilecount="384" columns="24">, các phần tử firstgid, name... là các child , phần thử đầu tiên được gọi là FisrtChildElement và phần tử kế tiếp là NextSiblingElement
@@ -94,8 +104,8 @@ TileLayer* MapParser::ParseTileLayer(TiXmlElement* xmlLayer, TilesetList tileset
 	}
 
 	std::string matrix(data->GetText());//truyền ma trận của layer đang xét vào matrix
-	//std::string matrix(data->GetText());//truy cập vào văn bản bên trong một phần tử(truy cập vào các nút con)
-	//std::cout << matrix;
+	// std::string matrix(data->getText());//truy cập vào văn bản bên trong một phần tử(truy cập vào các nút con)
+	// std::cout << matrix;
 	std::stringstream iss(matrix);//lưu matrix vào iss và lưu vào buffer
 	std::string id;
 

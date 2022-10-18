@@ -2,7 +2,12 @@
 #include "TextureManager.h"
 
 
-TextureManager* TextureManager::s_Instance = nullptr;
+TextureManager* TextureManager::sInstance = nullptr;
+
+TextureManager* TextureManager::getInstance()
+{
+	return sInstance = (sInstance != nullptr) ? sInstance : new TextureManager();
+}
 
 bool TextureManager::Load(std::string id, std::string filename)
 {
@@ -20,7 +25,7 @@ bool TextureManager::Load(std::string id, std::string filename)
 		return false;
 	}
 	//nếu mọi thứ đều đúng -> thêm texture vào và return true
-	m_TextureMap[id] = texture;
+	mTextureMap[id] = texture;
 	return true;
 }
 
@@ -53,50 +58,50 @@ void TextureManager::DrawTile(std::string tilesetID, int tileSize, int x, int y,
 {
 
 	SDL_Rect srcRect = { tileSize * frame, tileSize * row, tileSize , tileSize };//soure điểm đầu của ảnh
-	Vector2D cam = Camera::GetInstance()->GetPosition();
+	Vector2D cam = Camera::getInstance()->getPosition();
 
-	SDL_Rect dstRect = { x - cam.GetX(), y - cam.GetY(), tileSize,tileSize };//destination đích đến của ảnh
+	SDL_Rect dstRect = { x - cam.getX(), y - cam.getY(), tileSize,tileSize };//destination đích đến của ảnh
 
-	SDL_RenderCopyEx(Game::getInstance()->getRenderer(), m_TextureMap[tilesetID], &srcRect, &dstRect, 0, nullptr, flip);
+	SDL_RenderCopyEx(Game::getInstance()->getRenderer(), mTextureMap[tilesetID], &srcRect, &dstRect, 0, nullptr, flip);
 }
 
 void TextureManager::Draw(std::string id, int x, int y, int width, int height, float scaleX = 1, float scaleY = 1, float scrollRatio = 1, SDL_RendererFlip flip)
 {
 	SDL_Rect srcRect = { 0, 0, width, height };//điểm đầu của source ảnh muốn vẽ vào
-	Vector2D cam = Camera::GetInstance()->GetPosition() * scrollRatio;
-	SDL_Rect dstRect = { x - cam.GetX(), y - cam.GetY(), width * scaleX, height * scaleY };//điểm in của ảnh trong window
+	Vector2D cam = Camera::getInstance()->getPosition() * scrollRatio;
+	SDL_Rect dstRect = { x - cam.getX(), y - cam.getY(), width * scaleX, height * scaleY };//điểm in của ảnh trong window
 
 
-	SDL_RenderCopyEx(Game::getInstance()->getRenderer(), m_TextureMap[id], &srcRect, &dstRect, 0, nullptr, flip); //xoay đối tượng, tham số thứ nhất là trình render, tham số thứ 2 là texture đưa vào cửa sổ, tham số thứ 3 là địa chỉ sourceRect, tham số thứ 4 là địa chỉ destinationRect, tham số thứ 5 là góc bạn muốn quay, tham số thứ 6 điểm căn giữa, tham số cuối cách đối tượng định hướng(lật theo chiều ngang hoặc dọc)
+	SDL_RenderCopyEx(Game::getInstance()->getRenderer(), mTextureMap[id], &srcRect, &dstRect, 0, nullptr, flip); //xoay đối tượng, tham số thứ nhất là trình render, tham số thứ 2 là texture đưa vào cửa sổ, tham số thứ 3 là địa chỉ sourceRect, tham số thứ 4 là địa chỉ destinationRect, tham số thứ 5 là góc bạn muốn quay, tham số thứ 6 điểm căn giữa, tham số cuối cách đối tượng định hướng(lật theo chiều ngang hoặc dọc)
 
 }
 void TextureManager::DrawFrame(std::string id, int x, int y, int width, int height, int row, int frame, SDL_RendererFlip flip)
 {
 	SDL_Rect srcRect = { (width * frame),(height * row), width, height };
 
-	Vector2D cam = Camera::GetInstance()->GetPosition();
+	Vector2D cam = Camera::getInstance()->getPosition();
 
-	SDL_Rect dstRect = { x - cam.GetX() ,y - cam.GetY(), width, height };
+	SDL_Rect dstRect = { x - cam.getX() ,y - cam.getY(), width, height };
 
-	SDL_RenderCopyEx(Game::getInstance()->getRenderer(), m_TextureMap[id], &srcRect, &dstRect, 0, nullptr, flip);
+	SDL_RenderCopyEx(Game::getInstance()->getRenderer(), mTextureMap[id], &srcRect, &dstRect, 0, nullptr, flip);
 }
 
 void TextureManager::DrawFrameCol(std::string id, int x, int y, int width, int height, int col, int frame, SDL_RendererFlip flip)
 {
 	SDL_Rect srcRect = { (width * col),(height * frame), width, height };
 
-	Vector2D cam = Camera::GetInstance()->GetPosition();
+	Vector2D cam = Camera::getInstance()->getPosition();
 
-	SDL_Rect dstRect = { x - cam.GetX() ,y - cam.GetY(), width, height };
+	SDL_Rect dstRect = { x - cam.getX() ,y - cam.getY(), width, height };
 
-	SDL_RenderCopyEx(Game::getInstance()->getRenderer(), m_TextureMap[id], &srcRect, &dstRect, 0, nullptr, flip);
+	SDL_RenderCopyEx(Game::getInstance()->getRenderer(), mTextureMap[id], &srcRect, &dstRect, 0, nullptr, flip);
 }
 
 
 void TextureManager::Drop(std::string id)
 {
-	SDL_DestroyTexture(m_TextureMap[id]);//chỉ phá hủy texture element nhưng không xóa khỏi map, lúc này nó là một con trỏ null
-	m_TextureMap.erase(id);//xóa khỏi bán đồ
+	SDL_DestroyTexture(mTextureMap[id]);//chỉ phá hủy texture element nhưng không xóa khỏi map, lúc này nó là một con trỏ null
+	mTextureMap.erase(id);//xóa khỏi bán đồ
 }
 
 void TextureManager::Clean()//dọn dẹp tất cả texture khi đóng ứng dụng
@@ -106,8 +111,7 @@ void TextureManager::Clean()//dọn dẹp tất cả texture khi đóng ứng d�
 	{
 		SDL_DestroyTexture(x.second);
 	}
-	m_TextureMap.clear();
+	mTextureMap.clear();
 	SDL_Log("texture map cleaned!!! ");
-
 }
 

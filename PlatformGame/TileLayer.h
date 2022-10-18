@@ -15,24 +15,23 @@ using	TilesetList = std::vector<Tileset>;//mảng 1 chiều các tileset///*ví 
 using	TileMap = std::vector<std::vector<int> >;// mảng 2 chiều các tile 
 class TileLayer : public Layer//chứa các tile được vẽ lên Layer, mỗi layer sẽ có các tile khác nhau
 {
+private:
+	int mTilesize;
+	int mRowCount, mColCount;
+	std::vector<SDL_Rect> mCollisionRect;
+	//Collider* mCollider;
+	TileMap mTileMap;//mảng 2 chiều các ID tile
+	TilesetList mTilesets;//mảng 1 chiều các tileset
 public:
 	TileLayer(int tilesize, int rowcount, int colcount, TileMap tilemap, TilesetList tilesets);
 	virtual void Render();
 	virtual void Update();
 	void RgidMap();
-	TileMap GetTileMap() { return m_TileMap; }//để dùng Biến m_TileMap ở các class khác(ví dụ như xử lý va chạm)
-	int GetTilesize() { return m_Tilesize; }
-	int GetRowCount() { return m_RowCount; }
-	int GetColCount() { return m_ColCount; }
-	std::vector<SDL_Rect> GetCollisionRect() { return m_CollisionRect; }
-private:
-
-	int m_Tilesize;
-	int m_RowCount, m_ColCount;
-	std::vector<SDL_Rect> m_CollisionRect;
-	//Collider* m_Collider;
-	TileMap m_TileMap;//mảng 2 chiều các ID tile
-	TilesetList m_Tilesets;//mảng 1 chiều các tileset
-
+	TileMap getTileMap();//để dùng Biến mTileMap ở các class khác(ví dụ như xử lý va chạm)
+	int getTilesize();
+	int getRowCount();
+	int getColCount();
+	std::vector<SDL_Rect> getCollisionRect();
 };
+
 #endif

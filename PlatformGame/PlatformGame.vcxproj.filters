@@ -16,20 +16,11 @@
     <Filter Include="Source Files\Camera">
       <UniqueIdentifier>{7a96cea2-73ae-446b-a3a2-3fd1fc9c0487}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Entities">
-      <UniqueIdentifier>{f0dfb762-8ba5-4f92-9288-479ba16c2dd8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Physics">
-      <UniqueIdentifier>{d0101823-e7e2-4915-b92e-52c4f7f81c54}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\States">
       <UniqueIdentifier>{dbe0ab26-e09e-489a-8624-462880e30aa9}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\stdafx">
       <UniqueIdentifier>{dd436040-f323-4690-82f8-b0c6a569e23a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\TextureMgr">
-      <UniqueIdentifier>{69d2179d-5403-4088-81a4-ac7acbf2370a}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Time">
       <UniqueIdentifier>{55738062-6b2d-463c-87e5-4bef2734442b}</UniqueIdentifier>
@@ -52,9 +43,6 @@
     <Filter Include="Source Files\Character">
       <UniqueIdentifier>{b34b2843-71ae-468f-92f5-1918210adce3}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Map">
-      <UniqueIdentifier>{c8be4406-6578-4eee-9523-198842d7662e}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -66,20 +54,8 @@
     <ClCompile Include="State.cpp">
       <Filter>Source Files\States</Filter>
     </ClCompile>
-    <ClCompile Include="Entity.cpp">
-      <Filter>Source Files\Entities</Filter>
-    </ClCompile>
-    <ClCompile Include="TextureManager.cpp">
-      <Filter>Source Files\TextureMgr</Filter>
-    </ClCompile>
     <ClCompile Include="Camera.cpp">
       <Filter>Source Files\Camera</Filter>
-    </ClCompile>
-    <ClCompile Include="Vector2D.cpp">
-      <Filter>Source Files\Physics</Filter>
-    </ClCompile>
-    <ClCompile Include="Point.cpp">
-      <Filter>Source Files\Physics</Filter>
     </ClCompile>
     <ClCompile Include="x64\Debug\tinystr.cpp">
       <Filter>Source Files\Tinyxml</Filter>
@@ -102,29 +78,14 @@
     <ClCompile Include="Game.cpp">
       <Filter>Source Files\Game</Filter>
     </ClCompile>
-    <ClCompile Include="MainMenuState.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Inputs.cpp">
       <Filter>Source Files\Inputs</Filter>
     </ClCompile>
     <ClCompile Include="Collision.cpp">
       <Filter>Source Files\Collision</Filter>
     </ClCompile>
-    <ClCompile Include="MapParse.cpp">
-      <Filter>Source Files\Map</Filter>
-    </ClCompile>
-    <ClCompile Include="TileLayer.cpp">
-      <Filter>Source Files\Map</Filter>
-    </ClCompile>
-    <ClCompile Include="GameMap.cpp">
-      <Filter>Source Files\Map</Filter>
-    </ClCompile>
-    <ClCompile Include="Layer.cpp">
-      <Filter>Source Files\Map</Filter>
-    </ClCompile>
-    <ClCompile Include="Collider.cpp">
-      <Filter>Source Files\Physics</Filter>
+    <ClCompile Include="MainMenuState.cpp">
+      <Filter>Source Files\States</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -134,20 +95,8 @@
     <ClInclude Include="State.h">
       <Filter>Source Files\States</Filter>
     </ClInclude>
-    <ClInclude Include="Entity.h">
-      <Filter>Source Files\Entities</Filter>
-    </ClInclude>
-    <ClInclude Include="TextureManager.h">
-      <Filter>Source Files\TextureMgr</Filter>
-    </ClInclude>
     <ClInclude Include="Camera.h">
       <Filter>Source Files\Camera</Filter>
-    </ClInclude>
-    <ClInclude Include="Vector2D.h">
-      <Filter>Source Files\Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="Point.h">
-      <Filter>Source Files\Physics</Filter>
     </ClInclude>
     <ClInclude Include="x64\Debug\tinystr.h">
       <Filter>Source Files\Tinyxml</Filter>
@@ -164,29 +113,14 @@
     <ClInclude Include="Game.h">
       <Filter>Source Files\Game</Filter>
     </ClInclude>
-    <ClInclude Include="MainMenuState.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Inputs.h">
       <Filter>Source Files\Inputs</Filter>
     </ClInclude>
     <ClInclude Include="Collision.h">
       <Filter>Source Files\Collision</Filter>
     </ClInclude>
-    <ClInclude Include="Layer.h">
-      <Filter>Source Files\Map</Filter>
-    </ClInclude>
-    <ClInclude Include="MapParse.h">
-      <Filter>Source Files\Map</Filter>
-    </ClInclude>
-    <ClInclude Include="TileLayer.h">
-      <Filter>Source Files\Map</Filter>
-    </ClInclude>
-    <ClInclude Include="GameMap.h">
-      <Filter>Source Files\Map</Filter>
-    </ClInclude>
-    <ClInclude Include="Collider.h">
-      <Filter>Source Files\Physics</Filter>
+    <ClInclude Include="MainMenuState.h">
+      <Filter>Source Files\States</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -17,7 +17,6 @@ TextureID(textureID)
 {
 
 }
-
 Entity::Entity(Properties* props) : mTransform(new Transform(props->X, props->Y)),
 mTextureID(props->TextureID), mWidth(props->Width), mHeight(props->Height),
 mFlip(props->Flip)

@@ -4,7 +4,6 @@
 #include "stdafx.h"
 #include "Entity.h"
 #include "Game.h"
-
 #define ATTACKED_TIME 15
 #define MAX_HEALTH_POINT 100
 

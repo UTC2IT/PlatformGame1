@@ -3,8 +3,6 @@
 
 #include "IObject.h"
 
-
-
 struct Properties
 {
 public:

@@ -77,8 +77,7 @@ void TileLayer::RgidMap()
 	{
 		for (unsigned int j = 0; j < unsigned(mColCount); j++)
 		{
-			;//mTileMap là các ID được truyền từ ParseTileMap 
-
+			//mTileMap là các ID được truyền từ ParseTileMap
 			if (mTileMap[i][j] > 0)
 			{
 				SDL_Rect Tile{ j * 16,i * 16, 16, 16 };

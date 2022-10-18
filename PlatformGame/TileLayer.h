@@ -35,6 +35,4 @@ private:
 	TilesetList m_Tilesets;//mảng 1 chiều các tileset
 
 };
-
-
 #endif

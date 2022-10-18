@@ -143,12 +143,10 @@
     <ClCompile Include="Layer.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MainMenuState.cpp" />
-<<<<<<< HEAD
     <ClCompile Include="MapParse.cpp" />
-=======
     <ClCompile Include="Point.cpp" />
     <ClCompile Include="RigidBody.cpp" />
->>>>>>> a6f054822c73cd94c8dcdbad63aba1aa097dc11b
+
     <ClCompile Include="State.cpp" />
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="TextureManager.cpp" />
@@ -171,12 +169,12 @@
     <ClInclude Include="Inputs.h" />
     <ClInclude Include="Layer.h" />
     <ClInclude Include="MainMenuState.h" />
-<<<<<<< HEAD
+
     <ClInclude Include="MapParse.h" />
-=======
+
     <ClInclude Include="Point.h" />
     <ClInclude Include="RigidBody.h" />
->>>>>>> a6f054822c73cd94c8dcdbad63aba1aa097dc11b
+
     <ClInclude Include="State.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="TextureManager.h" />

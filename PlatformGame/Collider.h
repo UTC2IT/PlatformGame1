@@ -48,4 +48,5 @@ private:
 	SDL_Rect m_Box;
 	SDL_Rect m_Buffer;
 };
+
 #endif 

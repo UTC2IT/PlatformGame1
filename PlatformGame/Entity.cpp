@@ -1,19 +1,21 @@
 #include "stdafx.h"
 #include "Entity.h"
 
-Entity::Entity()
-{
-	
-}
-
-Entity::~Entity()
-{
-
-} 
 
 Properties::Properties(std::string textureID, float x, float y, int width, int height, int index, SDL_RendererFlip flip) : X(x), Y(y), Flip(flip),
 Width(width), Height(height),
 TextureID(textureID)
+{
+
+}
+
+
+Entity::Entity()
+{
+
+}
+
+Entity::~Entity()
 {
 
 }

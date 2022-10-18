@@ -1,14 +1,9 @@
 ﻿#ifndef MAGE_H
 #define MAGE_H
 
-#include "stdafx.h"
-#include "SpriteAnimation.h"
-#include "ColSpriteAnimation.h"
-#include "CollisionHandler.h"
-#include "RigidBody.h"
-#include "Collider.h"
+
 #include "Entity.h"
-#include "Game.h"
+
 #define JUMP_TIME 20.0f
 #define JUMP_FORCE 15.0f
 
@@ -30,7 +25,7 @@ class Mage : public Entity
 public:
 
 	Mage(Properties* props);
-
+	~Mage() {};
 
 	virtual void Draw();
 	virtual void Update(float dt);

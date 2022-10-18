@@ -2,7 +2,6 @@
 #define COLLISION_H
 
 #include "TileLayer.h"
-#include "Collider.h"
 #include "Game.h"
 
 class Collision

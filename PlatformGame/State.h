@@ -2,8 +2,6 @@
 #define	STATE_H
 
 
-#include "Entity.h"
-
 
 class State
 {

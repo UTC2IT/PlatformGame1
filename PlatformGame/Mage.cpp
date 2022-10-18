@@ -1,7 +1,6 @@
-﻿#include "Mage.h"
+﻿#include "stdafx.h"
 #include "Mage.h"
-#include "RigidBody.h"
-#include "Camera.h"
+
 
 
 static Registrar<Mage> registrar("Player");
@@ -266,7 +265,7 @@ void Mage::Update(float dt)
 
 		}
 	}
-	if (Collision::getInstance()->DynamicRectVsRect(mCollider->getBox(), mCollider->getTilesetBox1(), mRigidBody->getVeclocity(), cp, cn, t_hit_near))
+	if (Collision::getInstance()->DynamicRectVsRect(mCollider->getBox(), mCollider->getTileSetBox1(), mRigidBody->getVeclocity(), cp, cn, t_hit_near))
 	{
 
 		mRigidBody->mVelocity += cn * Vector2D(std::abs(mRigidBody->mVelocity.getX()), std::abs(mRigidBody->mVelocity.getY())) * (1 - t_hit_near);

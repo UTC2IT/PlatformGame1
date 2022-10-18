@@ -8,7 +8,7 @@ class GameState :
     public State
 {
 private:
-    Entity mPlayer;
+
 
 public:
     GameState();

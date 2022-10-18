@@ -14,6 +14,8 @@ class RigidBody
 {
 private:
 	friend class TileLayer;
+	friend class Enemy;
+	friend class Mage;
 	float fMass;//khối lượng
 	float fGravity;//trọng lực
 	Vector2D mForce;
@@ -21,6 +23,7 @@ private:
 	Vector2D mPosition;//vị trí
 	Vector2D mVelocity;//vận tốc
 	Vector2D mAccleration;//gia tốc
+	
 public:
 	RigidBody();
 	void setMass(float mass);

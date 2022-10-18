@@ -73,6 +73,18 @@
     <ClCompile Include="x64\Debug\tinyxmlparser.cpp">
       <Filter>Source Files\tinyxml</Filter>
     </ClCompile>
+    <ClCompile Include="IObject.cpp">
+      <Filter>Source Files\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>Source Files\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>Source Files\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="Mage.cpp">
+      <Filter>Source Files\Character</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h">
@@ -138,6 +150,18 @@
     <ClInclude Include="x64\Debug\tinystr.h">
       <Filter>Source Files\tinyxml</Filter>
     </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Source Files\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="IObject.h">
+      <Filter>Source Files\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>Source Files\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="Mage.h">
+      <Filter>Source Files\Character</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
@@ -181,6 +205,12 @@
     </Filter>
     <Filter Include="Source Files\tinyxml">
       <UniqueIdentifier>{4dfd47cb-f58b-4db2-878b-f16f728cd6a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Entities">
+      <UniqueIdentifier>{360b0948-3a9c-40b9-b048-4dc454bc44e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Character">
+      <UniqueIdentifier>{c9a739d2-574f-4903-8113-d046e837a3a4}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

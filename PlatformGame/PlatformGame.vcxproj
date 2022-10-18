@@ -104,12 +104,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Hung\SDL\SDL2-2.24.0\include;C:\Users\Hung\SDL\SDL2_image-2.6.2\include;C:\Users\Hung\SDL\SDL_ttf-2.0.11\include;C:\Users\Hung\SDL\SDL_mixer-1.2.7\include;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL_mixer-1.2.7\include;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL_ttf-2.0.11\include;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL2_image-2.6.2\include;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL2-2.24.0\include;C:\Program Files\SDL\SDL2_image-2.6.2\include;C:\Program Files\SDL\SDL2-2.24.0\include;C:\Program Files\SDL\SDL_ttf-2.0.11\include;C:\Program Files\SDL\SDL_mixer-1.2.7\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\nguye\OneDrive\Tài liệu\Visual Studio 2022\SDL\SDL2-2.24.0\include;C:\Users\nguye\OneDrive\Tài liệu\Visual Studio 2022\SDL\SDL2_image-2.6.2\include;C:\Users\nguye\OneDrive\Tài liệu\Visual Studio 2022\SDL\SDL_ttf-2.0.11\include;C:\Users\nguye\OneDrive\Tài liệu\Visual Studio 2022\SDL\SDL_mixer-1.2.7\include;C:\Users\Hung\SDL\SDL2-2.24.0\include;C:\Users\Hung\SDL\SDL2_image-2.6.2\include;C:\Users\Hung\SDL\SDL_ttf-2.0.11\include;C:\Users\Hung\SDL\SDL_mixer-1.2.7\include;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL_mixer-1.2.7\include;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL_ttf-2.0.11\include;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL2_image-2.6.2\include;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL2-2.24.0\include;C:\Program Files\SDL\SDL2_image-2.6.2\include;C:\Program Files\SDL\SDL2-2.24.0\include;C:\Program Files\SDL\SDL_ttf-2.0.11\include;C:\Program Files\SDL\SDL_mixer-1.2.7\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\Hung\SDL\SDL2-2.24.0\lib\x64;C:\Users\Hung\SDL\SDL2_image-2.6.2\lib\x64;C:\Users\Hung\SDL\SDL_ttf-2.0.11\lib\x64;C:\Users\Hung\SDL\SDL_mixer-1.2.7\lib;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL_mixer-1.2.7\lib;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL_ttf-2.0.11\lib\x64;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL2_image-2.6.2\lib\x64;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL2-2.24.0\lib\x64;C:\Program Files\SDL\SDL2_image-2.6.2\lib\x64;C:\Program Files\SDL\SDL2-2.24.0\lib\x64;C:\Program Files\SDL\SDL_ttf-2.0.11\lib\x64;C:\Program Files\SDL\SDL_mixer-1.2.7\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\nguye\OneDrive\Tài liệu\Visual Studio 2022\SDL\SDL2-2.24.0\lib\x64;C:\Users\nguye\OneDrive\Tài liệu\Visual Studio 2022\SDL\SDL2_image-2.6.2\lib\x64;C:\Users\nguye\OneDrive\Tài liệu\Visual Studio 2022\SDL\SDL_ttf-2.0.11\lib\x64;C:\Users\nguye\OneDrive\Tài liệu\Visual Studio 2022\SDL\SDL_mixer-1.2.7\lib;C:\Users\Hung\SDL\SDL2-2.24.0\lib\x64;C:\Users\Hung\SDL\SDL2_image-2.6.2\lib\x64;C:\Users\Hung\SDL\SDL_ttf-2.0.11\lib\x64;C:\Users\Hung\SDL\SDL_mixer-1.2.7\lib;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL_mixer-1.2.7\lib;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL_ttf-2.0.11\lib\x64;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL2_image-2.6.2\lib\x64;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL2-2.24.0\lib\x64;C:\Program Files\SDL\SDL2_image-2.6.2\lib\x64;C:\Program Files\SDL\SDL2-2.24.0\lib\x64;C:\Program Files\SDL\SDL_ttf-2.0.11\lib\x64;C:\Program Files\SDL\SDL_mixer-1.2.7\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2test.lib;SDL2_image.lib;SDL_ttf.lib;SDL_mixer.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -121,14 +121,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL_mixer-1.2.7\include;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL_ttf-2.0.11\include;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL2_image-2.6.2\include;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL2-2.24.0\include;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL_mixer-1.2.7\include;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL2_image-2.6.2\include;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL2-2.24.0\include;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL_ttf-2.0.11\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\nguye\OneDrive\Tài liệu\Visual Studio 2022\SDL\SDL2-2.24.0\include;C:\Users\nguye\OneDrive\Tài liệu\Visual Studio 2022\SDL\SDL2_image-2.6.2\include;C:\Users\nguye\OneDrive\Tài liệu\Visual Studio 2022\SDL\SDL_ttf-2.0.11\include;C:\Users\nguye\OneDrive\Tài liệu\Visual Studio 2022\SDL\SDL_mixer-1.2.7\include;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL_mixer-1.2.7\include;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL_ttf-2.0.11\include;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL2_image-2.6.2\include;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL2-2.24.0\include;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL_mixer-1.2.7\include;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL2_image-2.6.2\include;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL2-2.24.0\include;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL_ttf-2.0.11\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL_mixer-1.2.7\lib;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL_ttf-2.0.11\lib\x64;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL2_image-2.6.2\lib\x64;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL2-2.24.0\lib\x64;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL_mixer-1.2.7\lib;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL_ttf-2.0.11\lib\x64;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL2_image-2.6.2\lib\x64;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL2-2.24.0\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\nguye\OneDrive\Tài liệu\Visual Studio 2022\SDL\SDL2-2.24.0\lib\x64;C:\Users\nguye\OneDrive\Tài liệu\Visual Studio 2022\SDL\SDL2_image-2.6.2\lib\x64;C:\Users\nguye\OneDrive\Tài liệu\Visual Studio 2022\SDL\SDL_ttf-2.0.11\lib\x64;C:\Users\nguye\OneDrive\Tài liệu\Visual Studio 2022\SDL\SDL_mixer-1.2.7\lib;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL_mixer-1.2.7\lib;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL_ttf-2.0.11\lib\x64;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL2_image-2.6.2\lib\x64;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL2-2.24.0\lib\x64;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL_mixer-1.2.7\lib;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL_ttf-2.0.11\lib\x64;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL2_image-2.6.2\lib\x64;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL2-2.24.0\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2test.lib;SDL2_image.lib;SDL_ttf.lib;SDL_mixer.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -136,11 +136,15 @@
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Collider.cpp" />
     <ClCompile Include="Collision.cpp" />
+    <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="Entity.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameMap.cpp" />
     <ClCompile Include="GameState.cpp" />
     <ClCompile Include="Inputs.cpp" />
+    <ClCompile Include="IObject.cpp" />
     <ClCompile Include="Layer.cpp" />
+    <ClCompile Include="Mage.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MainMenuState.cpp" />
     <ClCompile Include="MapParse.cpp" />
@@ -162,11 +166,15 @@
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Collider.h" />
     <ClInclude Include="Collision.h" />
+    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="Entity.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameMap.h" />
     <ClInclude Include="GameState.h" />
     <ClInclude Include="Inputs.h" />
+    <ClInclude Include="IObject.h" />
     <ClInclude Include="Layer.h" />
+    <ClInclude Include="Mage.h" />
     <ClInclude Include="MainMenuState.h" />
     <ClInclude Include="MapParse.h" />
     <ClInclude Include="Point.h" />

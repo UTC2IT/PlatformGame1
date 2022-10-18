@@ -1,10 +1,9 @@
-
+#include "stdafx.h"
 #include "Entity.h"
 
 Entity::Entity()
 {
-	this->mPlayer = { 0.f,0.f,50.f,50.f };
-	this->mMovementSpeed = 100.0f;
+	
 }
 
 Entity::~Entity()
@@ -12,21 +11,18 @@ Entity::~Entity()
 
 } 
 
-void Entity::move(const float& dt, const float& x, const float& y)
+Properties::Properties(std::string textureID, float x, float y, int width, int height, int index, SDL_RendererFlip flip) : X(x), Y(y), Flip(flip),
+Width(width), Height(height),
+TextureID(textureID)
 {
-	this->mPlayer.x += dt * x * this->mMovementSpeed;
-	this->mPlayer.y += dt * y * this->mMovementSpeed;
-	
+
 }
 
-
-void Entity::Update(const float& dt)
+Entity::Entity(Properties* props) : mTransform(new Transform(props->X, props->Y)),
+mTextureID(props->TextureID), mWidth(props->Width), mHeight(props->Height),
+mFlip(props->Flip)
 {
-	
-}
-
-void Entity::Render(SDL_Renderer* renderer)
-{
-	SDL_SetRenderDrawColor(renderer, 100, 0, 0,250);
-	SDL_RenderFillRectF(renderer, &this->mPlayer);
+	float px = props->X + static_cast<float>(props->Width / 2);
+	float py = props->Y + static_cast<float>(props->Height / 2);
+	mOrigin = new Point(px, py);
 }

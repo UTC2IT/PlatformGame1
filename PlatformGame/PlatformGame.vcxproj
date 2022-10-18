@@ -104,12 +104,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL_mixer-1.2.7\include;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL_ttf-2.0.11\include;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL2_image-2.6.2\include;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL2-2.24.0\include;C:\Program Files\SDL\SDL2_image-2.6.2\include;C:\Program Files\SDL\SDL2-2.24.0\include;C:\Program Files\SDL\SDL_ttf-2.0.11\include;C:\Program Files\SDL\SDL_mixer-1.2.7\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Hung\SDL\SDL2-2.24.0\include;C:\Users\Hung\SDL\SDL2_image-2.6.2\include;C:\Users\Hung\SDL\SDL_ttf-2.0.11\include;C:\Users\Hung\SDL\SDL_mixer-1.2.7\include;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL_mixer-1.2.7\include;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL_ttf-2.0.11\include;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL2_image-2.6.2\include;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL2-2.24.0\include;C:\Program Files\SDL\SDL2_image-2.6.2\include;C:\Program Files\SDL\SDL2-2.24.0\include;C:\Program Files\SDL\SDL_ttf-2.0.11\include;C:\Program Files\SDL\SDL_mixer-1.2.7\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL_mixer-1.2.7\lib;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL_ttf-2.0.11\lib\x64;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL2_image-2.6.2\lib\x64;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL2-2.24.0\lib\x64;C:\Program Files\SDL\SDL2_image-2.6.2\lib\x64;C:\Program Files\SDL\SDL2-2.24.0\lib\x64;C:\Program Files\SDL\SDL_ttf-2.0.11\lib\x64;C:\Program Files\SDL\SDL_mixer-1.2.7\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\Hung\SDL\SDL2-2.24.0\lib\x64;C:\Users\Hung\SDL\SDL2_image-2.6.2\lib\x64;C:\Users\Hung\SDL\SDL_ttf-2.0.11\lib\x64;C:\Users\Hung\SDL\SDL_mixer-1.2.7\lib;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL_mixer-1.2.7\lib;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL_ttf-2.0.11\lib\x64;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL2_image-2.6.2\lib\x64;C:\Users\Cuong\OneDrive\Tài liệu\Libraries\SDL2-2.24.0\lib\x64;C:\Program Files\SDL\SDL2_image-2.6.2\lib\x64;C:\Program Files\SDL\SDL2-2.24.0\lib\x64;C:\Program Files\SDL\SDL_ttf-2.0.11\lib\x64;C:\Program Files\SDL\SDL_mixer-1.2.7\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2test.lib;SDL2_image.lib;SDL_ttf.lib;SDL_mixer.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -146,7 +146,6 @@
     <ClCompile Include="MapParse.cpp" />
     <ClCompile Include="Point.cpp" />
     <ClCompile Include="RigidBody.cpp" />
-
     <ClCompile Include="State.cpp" />
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="TextureManager.cpp" />
@@ -169,12 +168,9 @@
     <ClInclude Include="Inputs.h" />
     <ClInclude Include="Layer.h" />
     <ClInclude Include="MainMenuState.h" />
-
     <ClInclude Include="MapParse.h" />
-
     <ClInclude Include="Point.h" />
     <ClInclude Include="RigidBody.h" />
-
     <ClInclude Include="State.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="TextureManager.h" />

@@ -8,7 +8,7 @@ class Camera//tạo ra một khung camera hình chữ nhật, target vào nhân 
 private:
 	Point* mTarget;//chọn mục tiêu là tâm của nhân vật
 	Vector2D mPosition;
-	SDL_Rect mViewBox;//phạm vi camera(hình chữ nhật)
+	SDL_FRect mViewBox;//phạm vi camera(hình chữ nhật)
 	static Camera* sInstance;
 	int	mSceneWidth, mSceneHeight;
 public:
@@ -18,19 +18,19 @@ public:
 	void Update(float dt);
 
 
-	inline int GetSceneWidth();
-	inline int GetSceneWitdh();
+	 int GetSceneWidth();
+	 int GetSceneWitdh();
 
-	inline SDL_Rect GetViewBox();
-	inline Vector2D GetPosition();
+	 SDL_FRect GetViewBox();
+	 Vector2D GetPosition();
 
-	inline void MoveX(float x);
-	inline void MoveY(float y);
+	 void MoveX(float x);
+	 void MoveY(float y);
 
-	inline void SetTarger(Point* target);
-	inline void SetSceneLimit(int w, int h);
+	 void SetTarger(Point* target);
+	 void SetSceneLimit(int w, int h);
 
-	inline static Camera* GetInstance();
+	 static Camera* getInstance();
 };
 
 #endif

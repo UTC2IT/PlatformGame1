@@ -18,7 +18,7 @@ class TileLayer : public Layer//chứa các tile được vẽ lên Layer, mỗi
 private:
 	int mTilesize;
 	int mRowCount, mColCount;
-	std::vector<SDL_Rect> mCollisionRect;
+	std::vector<SDL_FRect> mCollisionRect;
 	//Collider* mCollider;
 	TileMap mTileMap;//mảng 2 chiều các ID tile
 	TilesetList mTilesets;//mảng 1 chiều các tileset
@@ -31,7 +31,7 @@ public:
 	int getTilesize();
 	int getRowCount();
 	int getColCount();
-	std::vector<SDL_Rect> getCollisionRect();
+	std::vector<SDL_FRect> getCollisionRect();
 };
 
 #endif

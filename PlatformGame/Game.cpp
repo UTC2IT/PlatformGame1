@@ -49,9 +49,9 @@ void Game::InitWindow()
 	assert(mRenderer != nullptr && SDL_GetError());
 
 
-	Camera::GetInstance()->SetTarger(new Point(100,100));
+	Camera::getInstance()->SetTarger(new Point(100,100));
 
-	Camera::GetInstance()->SetSceneLimit(900, 600);
+	Camera::getInstance()->SetSceneLimit(900, 600);
 }
 
 void Game::InitStates()
@@ -80,7 +80,7 @@ void Game::Update()
 		this->mRunning = false;
 	}
 
-	Inputs::GetInstance()->Listen();
+	Inputs::getInstance()->Listen();
 
 }
 

@@ -19,7 +19,7 @@ public:
 	void setTileSetBox2(float x, float y, float w, float h);
 	void setSkillHitBox(SDL_FRect skillhitbox);
 	SDL_FRect getSkillHitBox();
-	SDL_FRect getTileSetBox1();
-	SDL_FRect getTileSetBox2();
+	SDL_FRect getTileHitBox1();
+	SDL_FRect getTileHitBox2();
 };
 #endif

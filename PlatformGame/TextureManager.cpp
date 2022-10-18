@@ -57,19 +57,19 @@ bool TextureManager::ParseTextures(std::string source)
 void TextureManager::DrawTile(std::string tilesetID, int tileSize, int x, int y, int row, int frame, SDL_RendererFlip flip)
 {
 
-	SDL_Rect srcRect = { tileSize * frame, tileSize * row, tileSize , tileSize };//soure điểm đầu của ảnh
+	SDL_FRect srcRect = { tileSize * frame, tileSize * row, tileSize , tileSize };//soure điểm đầu của ảnh
 	Vector2D cam = Camera::getInstance()->getPosition();
 
-	SDL_Rect dstRect = { x - cam.getX(), y - cam.getY(), tileSize,tileSize };//destination đích đến của ảnh
+	SDL_FRect dstRect = { x - cam.getX(), y - cam.getY(), tileSize,tileSize };//destination đích đến của ảnh
 
 	SDL_RenderCopyEx(Game::getInstance()->getRenderer(), mTextureMap[tilesetID], &srcRect, &dstRect, 0, nullptr, flip);
 }
 
 void TextureManager::Draw(std::string id, int x, int y, int width, int height, float scaleX = 1, float scaleY = 1, float scrollRatio = 1, SDL_RendererFlip flip)
 {
-	SDL_Rect srcRect = { 0, 0, width, height };//điểm đầu của source ảnh muốn vẽ vào
+	SDL_FRect srcRect = { 0, 0, width, height };//điểm đầu của source ảnh muốn vẽ vào
 	Vector2D cam = Camera::getInstance()->getPosition() * scrollRatio;
-	SDL_Rect dstRect = { x - cam.getX(), y - cam.getY(), width * scaleX, height * scaleY };//điểm in của ảnh trong window
+	SDL_FRect dstRect = { x - cam.getX(), y - cam.getY(), width * scaleX, height * scaleY };//điểm in của ảnh trong window
 
 
 	SDL_RenderCopyEx(Game::getInstance()->getRenderer(), mTextureMap[id], &srcRect, &dstRect, 0, nullptr, flip); //xoay đối tượng, tham số thứ nhất là trình render, tham số thứ 2 là texture đưa vào cửa sổ, tham số thứ 3 là địa chỉ sourceRect, tham số thứ 4 là địa chỉ destinationRect, tham số thứ 5 là góc bạn muốn quay, tham số thứ 6 điểm căn giữa, tham số cuối cách đối tượng định hướng(lật theo chiều ngang hoặc dọc)
@@ -77,22 +77,22 @@ void TextureManager::Draw(std::string id, int x, int y, int width, int height, f
 }
 void TextureManager::DrawFrame(std::string id, int x, int y, int width, int height, int row, int frame, SDL_RendererFlip flip)
 {
-	SDL_Rect srcRect = { (width * frame),(height * row), width, height };
+	SDL_FRect srcRect = { (width * frame),(height * row), width, height };
 
 	Vector2D cam = Camera::getInstance()->getPosition();
 
-	SDL_Rect dstRect = { x - cam.getX() ,y - cam.getY(), width, height };
+	SDL_FRect dstRect = { x - cam.getX() ,y - cam.getY(), width, height };
 
 	SDL_RenderCopyEx(Game::getInstance()->getRenderer(), mTextureMap[id], &srcRect, &dstRect, 0, nullptr, flip);
 }
 
 void TextureManager::DrawFrameCol(std::string id, int x, int y, int width, int height, int col, int frame, SDL_RendererFlip flip)
 {
-	SDL_Rect srcRect = { (width * col),(height * frame), width, height };
+	SDL_FRect srcRect = { (width * col),(height * frame), width, height };
 
 	Vector2D cam = Camera::getInstance()->getPosition();
 
-	SDL_Rect dstRect = { x - cam.getX() ,y - cam.getY(), width, height };
+	SDL_FRect dstRect = { x - cam.getX() ,y - cam.getY(), width, height };
 
 	SDL_RenderCopyEx(Game::getInstance()->getRenderer(), mTextureMap[id], &srcRect, &dstRect, 0, nullptr, flip);
 }

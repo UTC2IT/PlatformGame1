@@ -80,9 +80,9 @@ private:
 	Collider* mCollider{};
 	SDL_RendererFlip mFlip;
 
-	SDL_Rect mHPBar;
-	SDL_Rect mAttackRanger;
-	SDL_Rect check;
+	SDL_FRect mHPBar;
+	SDL_FRect mAttackRanger;
+	SDL_FRect check;
 
 	int mRow = {}, mFrame = {}, mFrameCount = {};
 	int mAnimSpeed = {};
@@ -96,7 +96,7 @@ private:
 	TileMap mCollisionTileMap1;
 	TileLayer* mCollisionLayer;
 	TileLayer* mCollisionLayer1;
-	std::vector<SDL_Rect> mRgidMap;
+	std::vector<SDL_FRect> mRgidMap;
 };
 
 #endif

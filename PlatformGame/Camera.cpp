@@ -59,7 +59,7 @@ inline int Camera::GetSceneWitdh()
 	mSceneHeight;
 }
 
-inline SDL_Rect Camera::GetViewBox()
+inline SDL_FRect Camera::GetViewBox()
 {
 	return mViewBox;
 }
@@ -89,7 +89,7 @@ inline void Camera::SetSceneLimit(int w, int h)
 	mSceneWidth = w; mSceneHeight = h;
 }
 
-inline Camera* Camera::GetInstance()
+inline Camera* Camera::getInstance()
 {
 	return sInstance = (sInstance != nullptr) ? sInstance : new Camera();
 }

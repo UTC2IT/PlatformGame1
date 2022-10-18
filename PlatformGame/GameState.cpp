@@ -45,7 +45,7 @@ void GameState::Update(const float& dt)
 
 	this->mPlayer.Update(dt);
 
-	Camera::GetInstance()->Update(dt);
+	Camera::getInstance()->Update(dt);
 }
 
 void GameState::Render(SDL_Renderer* renderer)

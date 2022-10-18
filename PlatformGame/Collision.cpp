@@ -9,18 +9,18 @@ Collision::Collision()
 	mCollisionTileMap = mCollisionLayer->getTileMap();
 	mCollider = new Collider();
 }
-bool Collision::PointVsRect(Vector2D& const point, const SDL_Rect& rect)//không thể đặt const Vector2D  vì không tương thích với hàm thành viên, đói với SDL_Rect bên trong nó chỉ chứa các chỉ số để vẽ retangle
+bool Collision::PointVsRect(Vector2D& const point, const SDL_FRect& rect)//không thể đặt const Vector2D  vì không tương thích với hàm thành viên, đói với SDL_FRect bên trong nó chỉ chứa các chỉ số để vẽ retangle
 {
 	return(point.getX() >= rect.x && point.getY() >= rect.w && point.getX() < rect.x + rect.w && point.getY() < rect.y + rect.h);
 }
-bool Collision::RectVsRect(const SDL_Rect& rect1, const SDL_Rect& rect2)
+bool Collision::RectVsRect(const SDL_FRect& rect1, const SDL_FRect& rect2)
 {
 	bool x_overlaps = ((rect1.x <= rect2.x + rect2.w) && (rect1.x + rect1.w >= rect2.x));//check có sự chồng chéo lên nhau giữa 2tile với nhau trên trục x hay không
 	bool y_overlaps = ((rect1.y <= rect2.y + rect2.h) && (rect1.y + rect1.h >= rect2.y));//check có sự chồng chéo lên nhau giữa 2tile với nhau trên trục y hay không
 	return (x_overlaps && y_overlaps);
 }
 
-bool Collision::RayVsRect(const Vector2D& ray_origin, const Vector2D& ray_direction, const SDL_Rect& target, Vector2D& contact_point, Vector2D& contact_normal, float& t_hit_near)
+bool Collision::RayVsRect(const Vector2D& ray_origin, const Vector2D& ray_direction, const SDL_FRect& target, Vector2D& contact_point, Vector2D& contact_normal, float& t_hit_near)
 {
 	Vector2D t_near, t_far;
 	t_near.X = (target.x - ray_origin.X) / ray_direction.X;
@@ -70,11 +70,11 @@ bool Collision::RayVsRect(const Vector2D& ray_origin, const Vector2D& ray_direct
 	return true;
 }
 
-bool Collision::DynamicRectVsRect(const SDL_Rect& in, const SDL_Rect& target, const Vector2D& velocity, Vector2D contact_point, Vector2D& contact_normal, float& t_hit_near)
+bool Collision::DynamicRectVsRect(const SDL_FRect& in, const SDL_FRect& target, const Vector2D& velocity, Vector2D contact_point, Vector2D& contact_normal, float& t_hit_near)
 {
 	if (velocity.X == 0 && velocity.Y == 0) return false;
 
-	SDL_Rect expanded_target{};
+	SDL_FRect expanded_target{};
 	expanded_target.x = target.x - in.w / 2;
 	expanded_target.y = target.y - in.h / 2;
 	expanded_target.w = target.w + in.w;
@@ -93,7 +93,7 @@ bool Collision::DynamicRectVsRect(const SDL_Rect& in, const SDL_Rect& target, co
 	}
 }
 
-bool Collision::DynamicRectVsMap(const SDL_Rect& in, const SDL_Rect& rect_static, const Vector2D& velocity)
+bool Collision::DynamicRectVsMap(const SDL_FRect& in, const SDL_FRect& rect_static, const Vector2D& velocity)
 {
 	Vector2D contact_point, contact_normal;
 	float contact_time = 0.0f;
@@ -106,7 +106,7 @@ bool Collision::DynamicRectVsMap(const SDL_Rect& in, const SDL_Rect& rect_static
 	return false;
 }
 
-bool Collision::SortGridMap(const SDL_Rect& in, std::vector<SDL_Rect> gridmap, const Vector2D& velocity, Vector2D contact_point, Vector2D& contact_normal, float& t_hit_near)
+bool Collision::SortGridMap(const SDL_FRect& in, std::vector<SDL_FRect> gridmap, const Vector2D& velocity, Vector2D contact_point, Vector2D& contact_normal, float& t_hit_near)
 {
 
 	std::vector<std::pair<int, float>> ContactTimeOfRect;

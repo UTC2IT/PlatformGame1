@@ -5,7 +5,7 @@ Inputs* Inputs::sInstance = nullptr;
 
 Inputs::Inputs()
 {
-	m_KeyStates = SDL_GetKeyboardState(nullptr);//khởi tạo giá trị ban đầu cho m_KeyStates
+	mKeyStates = SDL_GetKeyboardState(nullptr);//khởi tạo giá trị ban đầu cho m_KeyStates
 }
 void Inputs::Listen()
 {
@@ -28,9 +28,9 @@ void Inputs::Listen()
 	}
 }
 
-bool Inputs::GetKeyDown(SDL_Scancode key)
+bool Inputs::getKeyDown(SDL_Scancode key)
 {
-	if (m_KeyStates[key] == 1)
+	if (mKeyStates[key] == 1)
 	{
 		return true;
 	}
@@ -40,34 +40,34 @@ bool Inputs::GetKeyDown(SDL_Scancode key)
 
 void Inputs::KeyUp()
 {
-	m_KeyStates = SDL_GetKeyboardState(nullptr);//kiểm tra có input từ bàn phím hay không, chưa cần truyền tham số.
+	mKeyStates = SDL_GetKeyboardState(nullptr);//kiểm tra có input từ bàn phím hay không, chưa cần truyền tham số.
 }
-int Inputs::GetKeyUp(SDL_Event event)
+int Inputs::getKeyUp(SDL_Event event)
 {
 	return 0;
 }
 
 void Inputs::KeyDown()
 {
-	m_KeyStates = SDL_GetKeyboardState(nullptr);
+	mKeyStates = SDL_GetKeyboardState(nullptr);
 
 }
 
-int Inputs::GetAxisKey(Axis axis)
+int Inputs::getAxisKey(Axis axis)
 {
 	switch (axis)
 	{
-	case HORIZONTAl:
-		if (GetKeyDown(SDL_SCANCODE_D))
+	case HORIZONTAl: //trucj docj
+		if (getKeyDown(SDL_SCANCODE_D))
 			return 1;
-		if (GetKeyDown(SDL_SCANCODE_A))
+		if (getKeyDown(SDL_SCANCODE_A))
 			return -1;
 		break;
 
-	case VERTICAL:
-		if (GetKeyDown(SDL_SCANCODE_W))
+	case VERTICAL://truc ngang
+		if (getKeyDown(SDL_SCANCODE_W))
 			return 1;
-		if (GetKeyDown(SDL_SCANCODE_S))
+		if (getKeyDown(SDL_SCANCODE_S))
 			return -1;
 		break;
 

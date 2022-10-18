@@ -44,12 +44,12 @@ SDL_FRect Collider::getSkillHitBox()
 	return mSkillHitBox;
 }
 
-SDL_FRect Collider::getTileHitBox1()
+SDL_FRect Collider::getTileSetBox1()
 {
 	return mTileSetBox1;
 }
 
-SDL_FRect Collider::getTileHitBox2()
+SDL_FRect Collider::getTileSetBox2()
 {
 	return mTileSetBox2;
 }

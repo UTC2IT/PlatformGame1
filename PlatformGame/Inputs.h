@@ -14,15 +14,15 @@ public:
 	}
 
 	void Listen();
-	bool GetKeyDown(SDL_Scancode key); //https://wiki.libsdl.org/SDL_Scancode
-	int GetKeyUp(SDL_Event event);
-	int GetAxisKey(Axis axis);
+	bool getKeyDown(SDL_Scancode key); //https://wiki.libsdl.org/SDL_Scancode
+	int getKeyUp(SDL_Event event);
+	int getAxisKey(Axis axis);
 private:
 	Inputs();
 
 	void KeyUp();
 	void KeyDown();
-	const Uint8* m_KeyStates;//(Unit8* có cùng kích thước bit nhưng không thể lưu trữ giá trị âm, lưu trữ giá trị được nhập từ bàn phím(event) , nếu trả về 1: input thành công, trả về 0: không có gì xảy ra.
+	const Uint8* mKeyStates;//(Unit8* có cùng kích thước bit nhưng không thể lưu trữ giá trị âm, lưu trữ giá trị được nhập từ bàn phím(event) , nếu trả về 1: input thành công, trả về 0: không có gì xảy ra.
 
 	static Inputs* sInstance;
 };

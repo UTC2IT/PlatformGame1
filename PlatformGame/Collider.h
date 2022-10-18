@@ -21,6 +21,5 @@ public:
 	SDL_FRect getSkillHitBox();
 	SDL_FRect getTileHitBox1();
 	SDL_FRect getTileHitBox2();
-
 };
 #endif

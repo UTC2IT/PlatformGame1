@@ -43,11 +43,16 @@
     <Filter Include="Source Files\Character">
       <UniqueIdentifier>{b34b2843-71ae-468f-92f5-1918210adce3}</UniqueIdentifier>
     </Filter>
+<<<<<<< HEAD
     <Filter Include="Source Files\Map">
       <UniqueIdentifier>{4d587804-0130-44e7-b4f2-3d5ef30317b5}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\TextureMgr">
       <UniqueIdentifier>{f61419a2-22d8-40a6-81fe-44244b911550}</UniqueIdentifier>
+=======
+    <Filter Include="Source Files\Physics">
+      <UniqueIdentifier>{6f91f135-867b-4f48-862f-247d9131721c}</UniqueIdentifier>
+>>>>>>> a6f054822c73cd94c8dcdbad63aba1aa097dc11b
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -93,6 +98,7 @@
     <ClCompile Include="MainMenuState.cpp">
       <Filter>Source Files\States</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="Layer.cpp">
       <Filter>Source Files\Map</Filter>
     </ClCompile>
@@ -107,6 +113,22 @@
     </ClCompile>
     <ClCompile Include="TextureManager.cpp">
       <Filter>Source Files\TextureMgr</Filter>
+=======
+    <ClCompile Include="Point.cpp">
+      <Filter>Source Files\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector2D.cpp">
+      <Filter>Source Files\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Transform.cpp">
+      <Filter>Source Files\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="RigidBody.cpp">
+      <Filter>Source Files\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Collider.cpp">
+      <Filter>Source Files\Physics</Filter>
+>>>>>>> a6f054822c73cd94c8dcdbad63aba1aa097dc11b
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -143,6 +165,7 @@
     <ClInclude Include="MainMenuState.h">
       <Filter>Source Files\States</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="Layer.h">
       <Filter>Source Files\Map</Filter>
     </ClInclude>
@@ -157,6 +180,22 @@
     </ClInclude>
     <ClInclude Include="TextureManager.h">
       <Filter>Source Files\TextureMgr</Filter>
+=======
+    <ClInclude Include="Point.h">
+      <Filter>Source Files\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Collider.h">
+      <Filter>Source Files\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="RigidBody.h">
+      <Filter>Source Files\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Transform.h">
+      <Filter>Source Files\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector2D.h">
+      <Filter>Source Files\Physics</Filter>
+>>>>>>> a6f054822c73cd94c8dcdbad63aba1aa097dc11b
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -45,23 +45,23 @@ void Mage::Draw()
 	Vector2D cam = Camera::getInstance()->getPosition();
 	mSpriteAnimation->DrawCol(mTransform->getX(), mTransform->getY(), mWidth, mHeight, mFlip, 1.25, 1.25);
 
-	SDL_Rect hitbox = mCollider->getBox();
+	SDL_FRect hitbox = mCollider->getBox();
 
 	SDL_SetRenderDrawColor(Game::getInstance()->getRenderer(), 254, 0, 0, 255);
-	SDL_RenderFillRect(Game::getInstance()->getRenderer(), &mHPBar);
+	SDL_RenderFillRectF(Game::getInstance()->getRenderer(), &mHPBar);
 	//SDL_RenderFillRect(Game::getInstance()->getRenderer(), &hitbox);
 
 
 	/*SDL_RenderDrawRect(Game::getInstance()->getRenderer(), &check);
-	SDL_Rect box = m_Collider->getBox();
+	SDL_FRect box = m_Collider->getBox();
 	box.x -= cam.getX();
 	box.y -= cam.getY();
 
-	SDL_Rect collsion = m_Collider->getTilesetBox1();
+	SDL_FRect collsion = m_Collider->getTilesetBox1();
 	collsion.x -= cam.getX();
 	collsion.y -= cam.getY();
 
-	SDL_Rect attack = m_Collider->getTilesetBox2();
+	SDL_FRect attack = m_Collider->getTilesetBox2();
 	attack.x -= cam.getX();
 	attack.y -= cam.getY();
 	SDL_RenderDrawRect(Game::getInstance()->getRenderer(), &box);
@@ -87,7 +87,7 @@ void Mage::Update(float dt)
 
 
 
-	SDL_Rect targetss1 = mCollider->getTileSetBox1();
+	SDL_FRect targetss1 = mCollider->getTileSetBox1();
 
 	targetss1.x -= cam.getX();
 	targetss1.y -= cam.getY();
@@ -101,7 +101,7 @@ void Mage::Update(float dt)
 	Vector2D cp, cn;
 	float t_hit_near;
 
-	mHPBar = { 0,0,static_cast<int>(mStatus.health), 10 };
+	mHPBar = { 0,0,static_cast<float>(mStatus.health), 10 };
 	if (mStatus.health < 100)
 	{
 		mStatus.health += dt * 0.01;
@@ -266,7 +266,7 @@ void Mage::Update(float dt)
 
 		}
 	}
-	if (CollisionHandler::getInstance()->DynamicRectVsRect(mCollider->getBox(), mCollider->getTilesetBox1(), mRigidBody->getVeclocity(), cp, cn, t_hit_near))
+	if (Collision::getInstance()->DynamicRectVsRect(mCollider->getBox(), mCollider->getTilesetBox1(), mRigidBody->getVeclocity(), cp, cn, t_hit_near))
 	{
 
 		mRigidBody->mVelocity += cn * Vector2D(std::abs(mRigidBody->mVelocity.getX()), std::abs(mRigidBody->mVelocity.getY())) * (1 - t_hit_near);
@@ -279,7 +279,7 @@ void Mage::Update(float dt)
 		mIsGrounded = false;
 	}
 
-	if (CollisionHandler::getInstance()->SortGridMap(mCollider->getBox(), mRgidMap, mRigidBody->getVeclocity(), cp, cn, t_hit_near))
+	if (Collision::getInstance()->SortGridMap(mCollider->getBox(), mRgidMap, mRigidBody->getVeclocity(), cp, cn, t_hit_near))
 	{
 
 		mRigidBody->mVelocity += cn * Vector2D(std::abs(mRigidBody->mVelocity.getX()), std::abs(mRigidBody->mVelocity.getY())) * (1 - t_hit_near);

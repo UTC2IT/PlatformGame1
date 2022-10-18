@@ -25,15 +25,15 @@ void Enemy::Draw()
 
 	mAnimation->Draw(mTransform->getX(), mTransform->getY(), mWidth, mHeight, mFlip);
 
-	//SDL_RenderDrawRect(Game::GetInstance()->GetRenderer(), &m_EnemyHitBox);
-	SDL_RenderDrawRect(Game::getInstance()->getRenderer(), &mPlayerHitBox);
+	//SDL_RenderDrawRect(Game::getInstance()->GetRenderer(), &m_EnemyHitBox);
+	SDL_RenderDrawRectF(Game::getInstance()->getRenderer(), &mPlayerHitBox);
 
 	SDL_SetRenderDrawColor(Game::getInstance()->getRenderer(), 255, 0, 0, 255);
-	SDL_RenderFillRect(Game::getInstance()->getRenderer(), &mHPBar);
-	SDL_RenderDrawRect(Game::getInstance()->getRenderer(), &mPlayerAttackRanger);
-	//SDL_RenderDrawRect(Game::GetInstance()->GetRenderer(), &m_SkillHitBox);
-	//SDL_RenderDrawRect(Game::GetInstance()->GetRenderer(), &m_HitBoxAttack);
-	//SDL_RenderDrawRect(Game::GetInstance()->GetRenderer(), &m_RangerActive);
+	SDL_RenderFillRectF(Game::getInstance()->getRenderer(), &mHPBar);
+	SDL_RenderDrawRectF(Game::getInstance()->getRenderer(), &mPlayerAttackRanger);
+	//SDL_RenderDrawRect(Game::getInstance()->GetRenderer(), &m_SkillHitBox);
+	//SDL_RenderDrawRect(Game::getInstance()->GetRenderer(), &m_HitBoxAttack);
+	//SDL_RenderDrawRect(Game::getInstance()->GetRenderer(), &m_RangerActive);
 }
 
 void Enemy::Clean()
@@ -175,9 +175,9 @@ void Enemy::Update(float dt)
 		}
 	}
 	//tương tác enemy vs map 
-	if (CollisionHandler::getInstance()->DynamicRectVsRect(mCollider->getBox(), mCollider->getTileSetBox1(), mRigidBody->getVeclocity(), cp, cn, t_hit_near))
+	if (Collision::getInstance()->DynamicRectVsRect(mCollider->getBox(), mCollider->getTileSetBox1(), mRigidBody->getVeclocity(), cp, cn, t_hit_near))
 	{
-		mRigidBody->mVelocity += cn * Vector2D(std::abs(mRigidBody->mVelocity.X), std::abs(mRigidBody->mVelocity.Y)) * (1 - t_hit_near);
+		mRigidBody->mVelocity += cn * Vector2D(std::abs(mRigidBody->mVelocity.getX()), std::abs(mRigidBody->mVelocity.getY())) * (1 - t_hit_near);
 		mIsGrounded = true;
 	}
 	else
@@ -186,8 +186,8 @@ void Enemy::Update(float dt)
 	}
 
 	//phát hiện player trong ranger attack 
-	if (CollisionHandler::getInstance()->RectVsRect(mPlayerAttackRanger, mEnemyHitBox) ||
-		CollisionHandler::getInstance()->RectVsRect(mSkillHitBox, mEnemyHitBox))
+	if (Collision::getInstance()->RectVsRect(mPlayerAttackRanger, mEnemyHitBox) ||
+		Collision::getInstance()->RectVsRect(mSkillHitBox, mEnemyHitBox))
 	{
 		mIsAttacked = true;
 	}
@@ -196,7 +196,7 @@ void Enemy::Update(float dt)
 		mIsAttacked = false;
 	}
 
-	if (CollisionHandler::getInstance()->RectVsRect(mPlayerHitBox, mCheckAttackRanger) && !mIsDeath && !mIsAttacked)
+	if (Collision::getInstance()->RectVsRect(mPlayerHitBox, mCheckAttackRanger) && !mIsDeath && !mIsAttacked)
 	{
 		mRigidBody->UnsetForce();
 		mIsAttacking = true;
@@ -209,7 +209,7 @@ void Enemy::Update(float dt)
 
 
 
-	if (CollisionHandler::getInstance()->RectVsRect(mPlayerHitBox, mRangerActive))
+	if (Collision::getInstance()->RectVsRect(mPlayerHitBox, mRangerActive))
 	{
 		mIsActive = true;
 	}
@@ -271,7 +271,7 @@ void Enemy::IsAttack()
 		}
 		else
 			mHitBoxAttack = { 0,0,0,0 };
-		if (CollisionHandle::getInstance()->RectVsRect(mHitBoxAttack, mPlayerHitBox) && !mIsDeath && !mIsAttacked)
+		if (Collision::getInstance()->RectVsRect(mHitBoxAttack, mPlayerHitBox) && !mIsDeath && !mIsAttacked)
 		{
 			Game::getInstance()->getGameObjects().front()->setIsAttacked(true, mDamage);
 		}

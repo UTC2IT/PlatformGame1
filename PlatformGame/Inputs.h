@@ -8,7 +8,7 @@ enum Axis { HORIZONTAl, VERTICAL };//HORIZONTAL là theo chiều ngang, VERTICAL
 class Inputs
 {
 public:
-	static Inputs* GetInstance()//ta chỉ cần 1 Instance của class này cho toàn bộ chương trình để tránh xung đột(ví dụ như có 2 event được truyền vào cùng lúc máy tính sẽ không biết input event nào trước.
+	static Inputs* getInstance()//ta chỉ cần 1 Instance của class này cho toàn bộ chương trình để tránh xung đột(ví dụ như có 2 event được truyền vào cùng lúc máy tính sẽ không biết input event nào trước.
 	{
 		return sInstance = (sInstance != nullptr) ? sInstance : new Inputs();
 	}

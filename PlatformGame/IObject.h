@@ -7,6 +7,7 @@
 #include "Collider.h"
 #include "RigidBody.h"
 #include "TileLayer.h"
+#include "Collision.h"
 class IObject//abstract class và interface là nền móng cho các class con khác phát triển thêm từ các hàm đã có sẵn trong abstract và interface
 {
 public:

@@ -23,7 +23,7 @@
       <Filter>Source Files\Physics</Filter>
     </ClCompile>
     <ClCompile Include="Collision.cpp">
-      <Filter>Source Files\Camera\Collision</Filter>
+      <Filter>Source Files\Collision</Filter>
     </ClCompile>
     <ClCompile Include="Game.cpp">
       <Filter>Source Files\Game</Filter>
@@ -106,7 +106,7 @@
       <Filter>Source Files\Physics</Filter>
     </ClInclude>
     <ClInclude Include="Collision.h">
-      <Filter>Source Files\Camera\Collision</Filter>
+      <Filter>Source Files\Collision</Filter>
     </ClInclude>
     <ClInclude Include="Game.h">
       <Filter>Source Files\Game</Filter>
@@ -191,9 +191,6 @@
     <Filter Include="Source Files\Inputs">
       <UniqueIdentifier>{21dbbfd5-58ce-4a3c-8ff4-eadb02a17a24}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Camera\Collision">
-      <UniqueIdentifier>{b2a37370-2f50-4ea2-9b69-9897d850bdc3}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\TextureMgr">
       <UniqueIdentifier>{20dd8d58-d63f-4ec6-8866-fcb7f4c5edcf}</UniqueIdentifier>
     </Filter>
@@ -211,6 +208,9 @@
     </Filter>
     <Filter Include="Source Files\Character">
       <UniqueIdentifier>{c9a739d2-574f-4903-8113-d046e837a3a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Collision">
+      <UniqueIdentifier>{b2a37370-2f50-4ea2-9b69-9897d850bdc3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

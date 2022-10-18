@@ -81,7 +81,7 @@ void TileLayer::RgidMap()
 
 			if (mTileMap[i][j] > 0)
 			{
-				SDL_Rect Tile{ j * 16,i * 16, 16, 16 };
+				SDL_FRect Tile{ j * 16,i * 16, 16, 16 };
 				mCollisionRect.emplace_back(Tile);
 			}
 		}
@@ -108,7 +108,7 @@ int TileLayer::getColCount()
 	return mColCount;
 }
 
-std::vector<SDL_Rect> TileLayer::getCollisionRect()
+std::vector<SDL_FRect> TileLayer::getCollisionRect()
 {
 	return mCollisionRect;
 }

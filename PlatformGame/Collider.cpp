@@ -44,6 +44,7 @@ SDL_FRect Collider::getSkillHitBox()
 	return mSkillHitBox;
 }
 
+
 SDL_FRect Collider::getTileSetBox1()
 {
 	return mTileSetBox1;

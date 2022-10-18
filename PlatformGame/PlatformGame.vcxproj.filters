@@ -85,6 +85,9 @@
     <ClCompile Include="Mage.cpp">
       <Filter>Source Files\Character</Filter>
     </ClCompile>
+    <ClCompile Include="ObjectFactory.cpp">
+      <Filter>Source Files\ObjectFactory</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h">
@@ -162,6 +165,9 @@
     <ClInclude Include="Mage.h">
       <Filter>Source Files\Character</Filter>
     </ClInclude>
+    <ClInclude Include="ObjectFactory.h">
+      <Filter>Source Files\ObjectFactory</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
@@ -211,6 +217,9 @@
     </Filter>
     <Filter Include="Source Files\Collision">
       <UniqueIdentifier>{b2a37370-2f50-4ea2-9b69-9897d850bdc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ObjectFactory">
+      <UniqueIdentifier>{56b5540e-af38-41d1-a42e-1ee27739f59a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
